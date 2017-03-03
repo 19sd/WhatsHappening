@@ -1,20 +1,22 @@
 import React from 'react';
-import Header from './Header';
 import Home from './Home';
+import Root from './Root';
+import User from './User';
+import {Router, Route, browserHistory, IndexRoute} from 'react-router';
 
 class App extends React.Component {
   render() {
     return(
-      <div className="container">
-        <div className="row">
-          <div className="col-xs-10 col-xs-offset-1">
-            <Header/>
-            <Home/>
-          </div>
-        </div>
-      </div>
+      <Router history={browserHistory}>
+        <Route path="/" component={Root}>
+          <IndexRoute component={Home} />
+          <Route path="home" component={Home} />
+          <Route path="user" component={User} />
+        </Route>
+      </Router>
     );
   }
+
 }
 
 export default App;
