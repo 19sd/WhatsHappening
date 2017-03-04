@@ -1,22 +1,22 @@
-import React from 'react';
-import Home from './Home';
-import Root from './Root';
-import User from './User';
-import {Router, Route, browserHistory, IndexRoute} from 'react-router';
+import React, { Component } from 'react';
+import Header from './Header';
 
-class App extends React.Component {
+class App extends Component{
+  static propTypes = {
+    children:React.PropTypes.node
+  }
   render() {
     return(
-      <Router history={browserHistory}>
-        <Route path="/" component={Root}>
-          <IndexRoute component={Home} />
-          <Route path="home" component={Home} />
-          <Route path="user" component={User} />
-        </Route>
-      </Router>
+      <div className="container">
+        <div className="row">
+          <div className="col-xs-10 col-xs-offset-1">
+            <Header />
+           {this.props.children}
+          </div>
+        </div>
+      </div>
     );
   }
-
 }
 
 export default App;
