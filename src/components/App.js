@@ -7,14 +7,15 @@ class App extends Component{
   }
   render() {
     return(
-      <div className="container">
-        <div className="row">
-          <div className="col-xs-10 col-xs-offset-1">
-            <Header />
-           {this.props.children}
+      <div>
+        <Header />
+        <div className="container-fluid">
+          <div className="row">
+            {this.props.children}
           </div>
         </div>
       </div>
+
     );
   }
 }

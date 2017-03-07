@@ -18,7 +18,7 @@ server.use(sassMiddleware({
 
 server.set('view engine', 'ejs');
 
-server.get(['/','/home','/user'], (req,res) => {
+server.get(['/','/home','/aboutus','/createevent','/profile','/settings'], (req,res) => {
   match({routes:routes, location: req.url}, (err, redirect, props) => {
     if (err) {
       res.status(500).send(err.message);

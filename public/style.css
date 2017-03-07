@@ -1,2 +1,15 @@
-.active {
-  color: orange; }
+.nav-item {
+  border-right: 1px solid #dddddd;
+  border-left: 1px solid #dddddd; }
+
+.nav li {
+  display: inline; }
+
+.Header {
+  border: 1px solid #dddddd; }
+
+.container-fluid {
+  padding-right: 0px; }
+
+.img-responsive {
+  margin-top: -15px; }
